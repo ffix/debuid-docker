@@ -14,4 +14,5 @@ docker build \
 
 docker run -it --rm \
     --mount "type=bind,source=${DIR}/workdir,target=/home/builduser/workdir" \
+    "$@" \
     "debuild:${DISTRO}-${RELEASE}"
