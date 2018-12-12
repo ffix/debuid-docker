@@ -7,7 +7,7 @@ MAINTAINER Sergey Ninua <sergeyn@gmail.com>
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
         dpkg-dev devscripts dh-make lintian fakeroot quilt eatmydata vim sudo curl \
-        equivs gcc \
+        equivs gcc build-essential git \
     \
     && apt-get autoremove -y --purge && apt-get clean \
     && find /var/log/ /var/lib/apt/lists/ -type f -delete \
